@@ -1,12 +1,15 @@
+import { Button } from '@mui/material';
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <Button variant="contained">Hello React!</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
