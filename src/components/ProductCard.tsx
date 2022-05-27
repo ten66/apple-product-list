@@ -12,42 +12,41 @@ type Props = {
   product: ProductInfo;
 }
 
-const ProductCard: React.FC<Props> = ({ product }) => {
-  return (
-    <Card sx={{
-      width: "20rem",
-      color: "white",
+const ProductCard: React.FC<Props> = ({ product }) => (
+  <Card sx={{
+    width: "20rem",
+    color: "white",
+  }}>
+    <CardMedia
+      component="img"
+      image={product.imgUrl}
+      sx={{
+        height: "14rem",
+      }}
+    />
+    <CardContent sx={{
+      background: "black",
+      height: "7rem",
     }}>
-      <CardMedia
-        component="img"
-        image={product.imgUrl}
+      <Typography gutterBottom variant="h5" component="div">
+        { product.name }
+      </Typography>
+      <Typography variant="body2" color="white">
+        { product.price }円（税込）から
+      </Typography>
+    </CardContent>
+    <CardActions sx={{ background: "black" }}>
+      <Button
+        size="small"
         sx={{
-          height: "14rem",
+          color: theme.palette.secondary.light,
         }}
-      />
-      <CardContent sx={{
-        background: "black",
-        height: "7rem",
-      }}>
-        <Typography gutterBottom variant="h5" component="div">
-          { product.name }
-        </Typography>
-        <Typography variant="body2" color="white">
-          { product.price }円（税込）から
-        </Typography>
-      </CardContent>
-      <CardActions sx={{ background: "black" }}>
-        <Button
-          size="small"
-          sx={{
-            color: theme.palette.secondary.light,
-          }}
-        >
-          購入
-        </Button>
-      </CardActions>
-    </Card>
-  );
-}
+      >
+        購入
+      </Button>
+    </CardActions>
+  </Card>
+);
+
 
 export default ProductCard;

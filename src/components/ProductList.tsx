@@ -8,51 +8,50 @@ type Props = {
   productList: ProductInfo[],
 }
 
-const ProductList: React.FC<Props> = ({ productList }) => {
-  return (
-    <Grid
-      item
+const ProductList: React.FC<Props> = ({ productList }) => (
+  <Grid
+    item
+    sx={{
+      width: "100%",
+      pb: 5,
+    }}
+  >
+    <Box
       sx={{
-        width: "100%",
-        pb: 5,
+        p: 1,
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
       }}
     >
-      <Box
-        sx={{
+      <Typography
+        variant='h5'
+        sx={{ 
+          color: "white",
           p: 1,
           display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
+          justifyContent: { xs: "center", sm: "flex-start" },
+          alignItems: "center",
+        }}
+        >
+        { productList[0].type }
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: { xs: "center", sm: "flex-start" },
         }}
       >
-        <Typography
-          variant='h5'
-          sx={{ 
-            color: "white",
-            p: 1,
-            display: "flex",
-            justifyContent: { xs: "center", sm: "flex-start" },
-            alignItems: "center",
-          }}
-          >
-          { productList[0].type }
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: { xs: "center", sm: "flex-start" },
-          }}
-        >
-          { productList.map((product) => (
-            <Box sx={{ py: 1, pr: 2, }}>
-              <ProductCard product={product} />
-            </Box>
-          ))}
-        </Box>
+        { productList.map((product) => (
+          <Box sx={{ py: 1, pr: 2, }}>
+            <ProductCard product={product} />
+          </Box>
+        ))}
       </Box>
-    </Grid>
-  );
-}
+    </Box>
+  </Grid>
+);
+
 
 export default ProductList;
