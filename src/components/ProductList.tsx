@@ -14,7 +14,7 @@ const ProductList = () => {
     >
       <Box
         sx={{
-          p: 2,
+          p: 1,
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",

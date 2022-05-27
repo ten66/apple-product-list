@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import theme from "../styles";
 
 const ProductCard = () => {
   return (
@@ -24,7 +25,14 @@ const ProductCard = () => {
         </Typography>
       </CardContent>
       <CardActions sx={{ background: "black" }}>
-        <Button size="small">もっと詳しく</Button>
+        <Button
+          size="small"
+          sx={{
+            color: theme.palette.secondary.light,
+          }}
+        >
+          購入
+        </Button>
       </CardActions>
     </Card>
   );

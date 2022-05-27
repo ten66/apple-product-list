@@ -24,7 +24,7 @@ const App = () => {
         direction="row"
         justifyContent="flex-start"
         alignItems="center"
-        sx={{ p: 3 }}
+        sx={{ p: 1 }}
       >
         <ProductList />
         <ProductList />
