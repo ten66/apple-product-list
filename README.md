@@ -4,7 +4,7 @@ Recursion の React 課題です。[Apple](https://www.apple.com/jp/)の商品�
 
 ## Page url
 
-[Github Pages]()
+[Github Pages](https://ten66.github.io/apple-product-list/)
 
 以下初期設定のまま変更なし
 
