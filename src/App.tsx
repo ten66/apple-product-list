@@ -1,7 +1,5 @@
-// import { Button } from '@mui/material';
-import { Grid } from '@mui/material';
 import React from 'react';
-// import logo from './logo.svg';
+import { Grid } from '@mui/material';
 import './App.css';
 import ButtonAppBar from './components/AppBar';
 import ProductList from './components/ProductList';
@@ -9,12 +7,6 @@ import { macList, iPhoneList, iPadList, WatchList } from "./productsInfo";
 
 const App = () => {
   return (
-    // <div className="App">
-    //   <ButtonAppBar />
-    //   <div className="App-header">
-    //     <div>a</div>
-    //   </div>
-    // </div>
     <div className="App">
       <ButtonAppBar />
       <Grid

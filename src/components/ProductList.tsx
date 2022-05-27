@@ -2,7 +2,6 @@ import React from "react";
 import ProductCard from './ProductCard';
 import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-// import { macList } from "../productsInfo";
 import { ProductInfo } from "../types";
 
 type Props = {
