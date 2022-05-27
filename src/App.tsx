@@ -5,8 +5,7 @@ import React from 'react';
 import './App.css';
 import ButtonAppBar from './components/AppBar';
 import ProductList from './components/ProductList';
-
-
+import { macList, iPhoneList, iPadList, WatchList } from "./productsInfo";
 
 const App = () => {
   return (
@@ -26,10 +25,10 @@ const App = () => {
         alignItems="center"
         sx={{ p: 1 }}
       >
-        <ProductList />
-        <ProductList />
-        <ProductList />
-        <ProductList />
+        <ProductList productList={ macList } />
+        <ProductList productList={ iPhoneList } />
+        <ProductList productList={ iPadList } />
+        <ProductList productList={ WatchList } />
       </Grid>
     </div>
   );

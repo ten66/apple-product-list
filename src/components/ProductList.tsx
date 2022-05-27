@@ -2,9 +2,14 @@ import React from "react";
 import ProductCard from './ProductCard';
 import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import { macList } from "../productsInfo";
+// import { macList } from "../productsInfo";
+import { ProductInfo } from "../types";
 
-const ProductList = () => {
+type Props = {
+  productList: ProductInfo[],
+}
+
+const ProductList: React.FC<Props> = ({ productList }) => {
   return (
     <Grid
       item
@@ -31,7 +36,7 @@ const ProductList = () => {
             alignItems: "center",
           }}
           >
-          Mac
+          { productList[0].type }
         </Typography>
         <Box
           sx={{
@@ -40,15 +45,11 @@ const ProductList = () => {
             justifyContent: { xs: "center", sm: "flex-start" },
           }}
         >
-          { macList.map((product) => (
+          { productList.map((product) => (
             <Box sx={{ py: 1, pr: 2, }}>
               <ProductCard product={product} />
             </Box>
           ))}
-          {/* <Box sx={{ py: 1, pr: 2, }}><ProductCard /></Box> */}
-          {/* <Box sx={{ py: 1, pr: 2, }}><ProductCard /></Box>
-          <Box sx={{ py: 1, pr: 2, }}><ProductCard /></Box>
-          <Box sx={{ py: 1, pr: 2, }}><ProductCard /></Box> */}
         </Box>
       </Box>
     </Grid>

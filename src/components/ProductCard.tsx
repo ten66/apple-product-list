@@ -15,16 +15,18 @@ type Props = {
 const ProductCard: React.FC<Props> = ({ product }) => {
   return (
     <Card sx={{
-      minWidth: "12rem",
-      maxWidth: "18rem",
+      // minWidth: "12rem",
+      width: "20rem",
       color: "white",
     }}>
       <CardMedia
         component="img"
-        image="https://www.apple.com/v/macbook-air/n/images/overview/macbook_air__cvqhw0f6aq82_large_2x.jpg"
-        alt="mac"
+        image={product.imgUrl}
+        sx={{
+          height: "14rem",
+        }}
       />
-      <CardContent sx={{ 
+      <CardContent sx={{
         background: "black",
         height: "7rem",
       }}>
@@ -32,7 +34,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           { product.name }
         </Typography>
         <Typography variant="body2" color="white">
-          115,280円（税込）から
+          { product.price }円（税込）から
         </Typography>
       </CardContent>
       <CardActions sx={{ background: "black" }}>
