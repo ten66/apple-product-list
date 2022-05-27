@@ -6,19 +6,30 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import theme from "../styles";
+import { ProductInfo } from '../types';
 
-const ProductCard = () => {
+type Props = {
+  product: ProductInfo;
+}
+
+const ProductCard: React.FC<Props> = ({ product }) => {
   return (
-    <Card sx={{ minWidth: "12rem", maxWidth: "15rem", color: "white" }}>
+    <Card sx={{
+      minWidth: "12rem",
+      maxWidth: "18rem",
+      color: "white",
+    }}>
       <CardMedia
         component="img"
-        height="100%"
         image="https://www.apple.com/v/macbook-air/n/images/overview/macbook_air__cvqhw0f6aq82_large_2x.jpg"
-        alt="mac book air"
+        alt="mac"
       />
-      <CardContent sx={{ background: "black" }}>
+      <CardContent sx={{ 
+        background: "black",
+        height: "7rem",
+      }}>
         <Typography gutterBottom variant="h5" component="div">
-          MacBook Air
+          { product.name }
         </Typography>
         <Typography variant="body2" color="white">
           115,280円（税込）から
