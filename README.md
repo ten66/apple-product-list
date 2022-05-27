@@ -1,3 +1,13 @@
+# Apple Product List
+
+Recursion の React 課題です。[Apple](https://www.apple.com/jp/)の商品を紹介するデモサイトです。
+
+## Page url
+
+[Github Pages]()
+
+以下初期設定のまま変更なし
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
