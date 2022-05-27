@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/apple-product-list/static/css/main.7f8136df.css",
+    "main.js": "/apple-product-list/static/js/main.2fc6e8aa.js",
+    "static/js/787.216d1c17.chunk.js": "/apple-product-list/static/js/787.216d1c17.chunk.js",
+    "index.html": "/apple-product-list/index.html",
+    "main.7f8136df.css.map": "/apple-product-list/static/css/main.7f8136df.css.map",
+    "main.2fc6e8aa.js.map": "/apple-product-list/static/js/main.2fc6e8aa.js.map",
+    "787.216d1c17.chunk.js.map": "/apple-product-list/static/js/787.216d1c17.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f8136df.css",
+    "static/js/main.2fc6e8aa.js"
+  ]
+}
